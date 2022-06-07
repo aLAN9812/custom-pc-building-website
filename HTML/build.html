@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="nav.js" defer></script>
+        <script type="module" src="build.js" defer></script>
+    </head>
+
+    <body>
+        <nav class="nav">
+            <div class="container">
+                <h1 class="logo"><a href="home.html">Build-A-PC</a></h1>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="build.html" class="current">Build</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main style="margin-top: 120px;">
+            <form class="form" action="/confirmation.html" method="POST">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="fname">First name:<span style="color: red;">*</span></label><br>
+                            <input type="text" id="fname" name="fname" size="46">
+                        </td>
+                        <td>
+                            <label for="lname">Last name:<span style="color: red;">*</span></label><br>
+                            <input type="text" id="lname" name="lname" size="46">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email:<span style="color: red;">*</span></label><br>
+                            <input type="text" id="email" name="email" size="46">
+                        </td>
+                        <td>
+                            <label for="phone">Phone:<span style="color: red;">*</span></label><br>
+                            <input type="text" id="phone" name="phone" size="46" placeholder="1234567890">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="address">Address line:<span style="color: red;">*</span></label><br>
+                            <input type="text" id="address" name="address" size="46">
+                        </td>
+                        <td>
+                            <label for="city">City:<span style="color: red;">*</span></label><br>
+                            <input type="text" id="city" name="city" size="46">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="state">State:<span style="color: red;">*</span></label><br>
+                            <input type="text" id="state" name="state" size="46" placeholder="XX">
+                        </td>
+                        <td>
+                            <label for="zip">Zip code:<span style="color: red;">*</span></label><br>
+                            <input type="text" id="zip" name="zip" size="46" placeholder="12345">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="budget">What is your PC build budget?<span style="color: red;">*</span></label><br>
+                            <input type="text" id="budget" name="budget" placeholder="All builds start at $1400 and up" size="46">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="time">How soon are you looking to purchase this PC build?<span style="color: red;">*</span></label><br>
+                            <select id="time" name="time">
+                                <option value="empty">Select</option>
+                                <option value="Ready to buy today">I'm ready to buy today</option>
+                                <option value="The next 2 weeks">The next 2 weeks</option>
+                                <option value="Over a month out">Over a month out</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="plan">What do you plan on using this PC for?<span style="color: red;">*</span></label><br>
+                            <input type="checkbox" id="game" name="game">
+                            <label for="game"> I just want to Game - Give me Frames!</label><br>
+                            <input type="checkbox" id="gamenstream" name="gamenstream">
+                            <label for="gamenstream"> I want to Game & Stream at the same time</label><br>
+                            <input type="checkbox" id="stream" name="stream">
+                            <label for="stream"> Stream PC (Using it to broadcast another PC's Gameplay)</label><br>
+                            <input type="checkbox" id="video" name="video">
+                            <label for="video"> I want to Edit Video or do Graphic Design</label><br>
+                            <input type="checkbox" id="business" name="business">
+                            <label for="business"> This is a Business Workstation PC</label><br>
+                            <input type="checkbox" id="family" name="family">
+                            <label for="family"> This is going to be our Family PC</label><br>
+                            <input type="checkbox" id="audio" name="audio">
+                            <label for="audio"> I want this PC for Audio Editing</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="gameList">If Gaming PC, what is your desired Gaming Resolution, Refresh Rate, and what type's of games are you planning on playing?</label><br>
+                            <textarea id="gameList" name="gameList" placeholder="Example: 1080p, 144+ FPS, Warzone and PUBG" rows="4" cols="90"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="require">Do you require any of the following?<span style="color: red;">*</span></label><br>
+                            <div class="toggle-container">
+                                <input type="checkbox" id="bluetooth" name="bluetooth" class="toggle">
+                                <label for="bluetooth" class="label">
+                                    <div class="ball"></div>
+                                </label><br>
+                                <span>BlueTooth</span>
+                            </div>
+                            <div class="toggle-container">
+                                <input type="checkbox" id="wifi" name="wifi" class="toggle">
+                                <label for="wifi" class="label">
+                                    <div class="ball"></div>
+                                </label><br>
+                                <span>WiFi</span>
+                            </div>
+                            <div class="toggle-container">
+                                <input type="checkbox" id="nowifibt" name="nowifibt" class="toggle">
+                                <label for="nowifibt" class="label">
+                                    <div class="ball"></div>
+                                </label><br>
+                                <span>None</span>
+                            </div>                 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <label for="comment">Any specific themes, looks, needs, special requests, or other comments?</label><br>
+                            <textarea id="comment" name="comment" placeholder="Do you want a black case? White case? Do you want RGB ram, RGB fans? List all of your wants and needs here!" rows="4" cols="90"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <button type="submit" id="submit">Submit Build Quote Request</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+        <div id="toasts"></div>
+    </body>
+</html>
